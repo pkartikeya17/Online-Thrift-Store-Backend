@@ -18,6 +18,26 @@
 //        return categoryRepository.findAll();
 //    }
 //}
+//package com.ecommerceFE.product_catalog.service;
+//
+//import com.ecommerceFE.product_catalog.model.Category;
+//import java.util.List;
+//
+//public interface CategoryService {
+//
+//    List<Category> getAllCategories();
+//
+//    Category getCategoryById(Long categoryId);
+//
+//    Category createCategory(Category category);
+//
+//    Category updateCategory(Long categoryId, Category category);
+//
+//    String deleteCategory(Long categoryId);
+//
+//    Category updateCategory(Category category, Long categoryId);
+//
+//}
 package com.ecommerceFE.product_catalog.service;
 
 import com.ecommerceFE.product_catalog.model.Category;
@@ -36,5 +56,4 @@ public interface CategoryService {
     String deleteCategory(Long categoryId);
 
     Category updateCategory(Category category, Long categoryId);
-
 }

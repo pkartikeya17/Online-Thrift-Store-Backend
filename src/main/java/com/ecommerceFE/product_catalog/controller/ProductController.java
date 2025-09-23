@@ -1,32 +1,3 @@
-//package com.ecommerceFE.product_catalog.controller;
-//
-//import com.ecommerceFE.product_catalog.model.Product;
-//import com.ecommerceFE.product_catalog.service.ProductService;
-//import org.springframework.web.bind.annotation.*;
-//
-//import java.util.List;
-//
-//@RestController
-//@RequestMapping("/api/products")
-//@CrossOrigin(origins = "https://localhost:5137")
-//public class ProductController {
-//
-//
-//    private final ProductService productService;
-//
-//    public ProductController(ProductService productService){
-//        this.productService = productService;
-//    }
-//    @GetMapping
-//    public List<Product> getAllProducts(){
-//        return productService.getAllProducts();
-//    }
-//
-//    @GetMapping("/category/{categoryID}")
-//    public List<Product> getAllProductsByCategory( @PathVariable  Long categoryID){
-//        return productService.getProductByCategory(categoryID);
-//    }
-//}
 package com.ecommerceFE.product_catalog.controller;
 
 import com.ecommerceFE.product_catalog.model.Product;
@@ -41,8 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api")
-//@CrossOrigin(origins = {"http://localhost:3000", "http://127.0.0.1:5500"})
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {"http://localhost:3000", "http://localhost:5173", "http://localhost:5174", "http://localhost:5175"})
 public class ProductController {
 
     @Autowired

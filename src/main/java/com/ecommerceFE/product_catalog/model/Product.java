@@ -1,27 +1,6 @@
-//package com.ecommerceFE.product_catalog.model;
-//
-//import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-//import jakarta.persistence.*;
-//import lombok.Data;
-//
-//@Entity
-//@Data
-//public class Product {
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    private Long id;
-//    private String name;
-//    private String description;
-//    private String imageUrl;
-//    private Double price;
-//
-//    @ManyToOne
-//    @JoinColumn(name = "category_id", nullable = false)
-//    @JsonIgnoreProperties("products")  // Prevents circular reference
-//    private Category category;
-//}
 package com.ecommerceFE.product_catalog.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import java.math.BigDecimal;
 
@@ -52,8 +31,9 @@ public class Product {
     @Column(precision = 5, scale = 2)
     private BigDecimal discount;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER) // Changed to EAGER to avoid lazy loading issues
     @JoinColumn(name = "category_id", nullable = false)
+    @JsonIgnoreProperties({"products", "hibernateLazyInitializer", "handler"}) // Prevent circular reference and lazy loading issues
     private Category category;
 
     // Constructors
