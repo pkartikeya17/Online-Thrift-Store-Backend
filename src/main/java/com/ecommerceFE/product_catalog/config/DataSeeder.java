@@ -71,7 +71,7 @@ public class DataSeeder implements CommandLineRunner {
                 Product jacket = new Product();
                 jacket.setProductName("Winter Jacket");
                 jacket.setDescription("Warm and cozy jacket for winters");
-                jacket.setImage("https://images.unsplash.com/photo-1544966503-7cc4ac882d2c?w=600&h=400&fit=crop");
+                jacket.setImage("https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8TGVhdGhlciUyMEphY2tldHxlbnwwfHwwfHx8MA%3D%3D");
                 jacket.setPrice(new BigDecimal("129.99"));
                 jacket.setQuantity(100);
                 jacket.setDiscount(new BigDecimal("20.0"));
